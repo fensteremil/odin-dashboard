@@ -3,10 +3,220 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+
+    --color-white: white;
+    --color-light: lightgrey;
+    --color-accent: teal;
+
+    --border-radius: 1em;
+
+    --padding-page: 1rem 1.5rem;
+    --padding-content: 0.5rem 0.75rem;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-areas: "sidebar header"
+        "sidebar main";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+
+    background-color: var(--color-light);
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    line-height: 2;
+}
+h1 {
+    font-size: 1.75em;
+}
+h2 {
+    font-size: 1.25em;
+    font-weight: normal;
+}
+h3 {
+    font-size: 1.1em;
+}
+
+/* Sidebar */
+
+aside {
+    grid-area: sidebar;
+    align-self: stretch;
+    padding: var(--padding-page);
+
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em;
+
+    & a.nav-link:link, a.nav-link:visited {
+        color: var(--color-white);
+        text-decoration: none;
+    }
+}
+
+/* Header */
+
+header {
+    grid-area: header;
+    padding: var(--padding-page);
+
+    display: grid;
+    grid-template-areas: "searchbar settings"
+        "greeting actions";
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+
+    background-color: var(--color-white);
+}
+
+header #searchbar {
+    grid-area: searchbar;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2.5em;
+
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+
+    &::before {
+        display: block;
+        position: relative;
+        left: -2.5em;
+        content: "";
+
+        background: url(media/search.svg) no-repeat;
+        background-size: contain;
+        width: 1.25em;
+        height: 1.25em;
+    }
+}
+
+header #user-settings {
+    grid-area: settings;
+}
+
+header #user-greeting {
+    grid-area: greeting;
+
+    & .greeting-name::before {
+        content: "Hi there, ";
+    }
+}
+
+header #user-actions {
+    grid-area: actions;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+    & a:link,
+    a:visited {
+        display: block;
+        padding: 0.25em 0.5em;
+
+        background-color: var(--color-accent);
+        border-radius: var(--border-radius);
+        color: var(--color-white);
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+/* Content */
+
+main {
+    grid-area: main;
+    padding: var(--padding-page);
+
+    display: grid;
+    grid-template-areas: "projects announcements" "projects trends";
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+}
+
+section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+
+    &>.sec-title {
+        grid-column: 1 / -1;
+    }
+
+    &>.sec-content {
+        grid-column: 1 / -1;
+        display: grid;
+    }
+}
+
+section#projects {
+    grid-area: projects;
+
+    >.sec-content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    & .project-card {
+        padding: var(--padding-content);
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+    }
+}
+
+section#announcements {
+    grid-area: announcements;
+
+    >.sec-content {
+        padding: var(--padding-content);
+
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+    }
+}
+
+section#trending {
+    grid-area: trends;
+
+    >.sec-content {
+        padding: var(--padding-content);
+
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+    }
 }
