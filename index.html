@@ -25,7 +25,7 @@
             <a href="" class="nav-link">Tasks</a>
             <img src="media/heart.svg" alt="Communities" class="icon">
             <a href="" class="nav-link">Communities</a>
-            
+            <div class="spacer"></div>
             <img src="media/settings.svg" alt="Settings" class="icon">
             <a href="" class="nav-link">Settings</a>
             <img src="media/help-circle.svg" alt="Support" class="icon">
@@ -36,20 +36,22 @@
     </aside>
     
     <header>
-        <div id="searchbar"></div>
+        <div id="searchbar">
+            <input type="search" name="search" id="search">
+        </div>
         <div id="user-settings">
             <a href="">
-                <img src="" alt="" class="icon">
+                <img src="media/bell.svg" alt="Notifications" class="icon">
             </a>
             <a href="" class="user-profile">
-                <span class="icon"></span> Morgan Oakley
+                <img src="" alt="" class="icon placeholder"> <span>Morgan Oakley</span>
             </a>
         </div>
         <div id="user-greeting">
-            <img src="" alt="" class="icon">
-            <div class="greeting-name">Morgan Oakley (@morgan)</div>
+            <img src="" alt="" class="icon placeholder">
+            <h1 class="greeting-name">Morgan Oakley (@morgan)</h1>
         </div>
-        <ul id="user-actions">
+        <ul id="user-actions" class="side-content">
             <li><a href="#">New</a></li>
             <li><a href="#">Upload</a></li>
             <li><a href="#">Share</a></li>
@@ -117,52 +119,54 @@
             </div>
         </section>
         
-        <section id="announcements">
+        <section id="announcements" class="side-content">
             <h2 class="sec-title">Announcements</h2>
             <div class="sec-content">
                 <div class="announcement">
-                    <div class="title">Site Maintenance</div>
+                    <h3 class="title">Site Maintenance</h3>
                     <p>Vestibulum condimentum tellus lacus, in accusam elit maximus ac. Donec hendrerit sodales congue...</p>
                 </div>
+                <div class="separator"></div>
                 <div class="announcement">
-                    <div class="title">Community Share Day</div>
+                    <h3 class="title">Community Share Day</h3>
                     <p>Nam vel lectus tincidunt, rutrum nulla eu, omare libero. Aliquam dictum accumsan porttitor...</p>
                 </div>
+                <div class="separator"></div>
                 <div class="announcement">
-                    <div class="title">Updated Provacy Policy</div>
+                    <h3 class="title">Updated Privacy Policy</h3>
                     <p>Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</p>
                 </div>
             </div>
         </section>
         
-        <section id="trending">
+        <section id="trending" class="side-content">
             <h2 class="sec-title">Trending</h2>
             <ul class="sec-content">
                 <li class="user-card">
-                    <a href="#">
-                        <img src="" alt="" class="icon">
-                        <div class="username">@tegan</div>
+                    <a href="">
+                        <img src="" alt="" class="icon placeholder">
+                        <div class="user-name">@tegan</div>
                         <div class="user-project">World Peace Builder</div>
                     </a>
                 </li>
                 <li class="user-card">
-                    <a href="#">
-                        <img src="" alt="" class="icon">
-                        <div class="username">@morgan</div>
+                    <a href="">
+                        <img src="" alt="" class="icon placeholder">
+                        <div class="user-name">@morgan</div>
                         <div class="user-project">Super Cool Project</div>
                     </a>
                 </li>
                 <li class="user-card">
-                    <a href="#">
-                        <img src="" alt="" class="icon">
-                        <div class="username">@kendall</div>
+                    <a href="">
+                        <img src="" alt="" class="icon placeholder">
+                        <div class="user-name">@kendall</div>
                         <div class="user-project">Life Changing App</div>
                     </a>
                 </li>
                 <li class="user-card">
-                    <a href="#">
-                        <img src="" alt="" class="icon">
-                        <div class="username">@alex</div>
+                    <a href="">
+                        <img src="" alt="" class="icon placeholder">
+                        <div class="user-name">@alex</div>
                         <div class="user-project">No Traffic Maker</div>
                     </a>
                 </li>
