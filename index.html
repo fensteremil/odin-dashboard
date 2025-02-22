@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=mulish:400,800|space-mono:400" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <title>Dashboard</title>
 </head>
 
 <body>
-    
+
     <aside id="sidebar">
-        <h1 id="page-title">Dashboard</h1>
         <nav>
+            <img src="" alt="" class="icon placeholder">
+            <h1 class="page-title">Dashboard</h1>
+            <div class="spacer"></div>
             <img src="media/home.svg" alt="Home" class="icon">
             <a href="" class="nav-link">Home</a>
             <img src="media/user.svg" alt="Profile" class="icon">
@@ -34,7 +38,7 @@
             <a href="" class="nav-link">Privacy</a>
         </nav>
     </aside>
-    
+
     <header>
         <div id="searchbar">
             <input type="search" name="search" id="search">
@@ -57,14 +61,15 @@
             <li><a href="#">Share</a></li>
         </ul>
     </header>
-    
+
     <main>
         <section id="projects">
             <h2 class="sec-title">Your Projects</h2>
             <div class="sec-content">
                 <div class="project-card">
                     <h3 class="card-title">Super Cool Project</h3>
-                    <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, it facilisis felis accumsan nec.</p>
+                    <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, it facilisis felis
+                        accumsan nec.</p>
                     <div class="actions">
                         <a href=""><img src="media/star.svg" alt="Favorite" class="icon"></a>
                         <a href=""><img src="media/eye.svg" alt="Watch" class="icon"></a>
@@ -73,7 +78,9 @@
                 </div>
                 <div class="project-card">
                     <h3 class="card-title">Less Cool Project</h3>
-                    <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor. Duis sem purus dignissim ut sapien in, varius pellentesque lacus.</p>
+                    <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur
+                        sapien et, facilisis dolor. Duis sem purus dignissim ut sapien in, varius pellentesque lacus.
+                    </p>
                     <div class="actions">
                         <a href=""><img src="media/star.svg" alt="Favorite" class="icon"></a>
                         <a href=""><img src="media/eye.svg" alt="Watch" class="icon"></a>
@@ -91,7 +98,8 @@
                 </div>
                 <div class="project-card">
                     <h3 class="card-title">Easy Peasy App</h3>
-                    <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
+                    <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam.
+                        Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
                     <div class="actions">
                         <a href=""><img src="media/star.svg" alt="Favorite" class="icon"></a>
                         <a href=""><img src="media/eye.svg" alt="Watch" class="icon"></a>
@@ -100,7 +108,8 @@
                 </div>
                 <div class="project-card">
                     <h3 class="card-title">Ad Blocker</h3>
-                    <p>Quisque eget rutrum nisi. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam sed malesuada eros.</p>
+                    <p>Quisque eget rutrum nisi. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis.
+                        Aliquam sed malesuada eros.</p>
                     <div class="actions">
                         <a href=""><img src="media/star.svg" alt="Favorite" class="icon"></a>
                         <a href=""><img src="media/eye.svg" alt="Watch" class="icon"></a>
@@ -109,7 +118,8 @@
                 </div>
                 <div class="project-card">
                     <h3 class="card-title">Money Maker</h3>
-                    <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
+                    <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque
+                        tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
                     <div class="actions">
                         <a href=""><img src="media/star.svg" alt="Favorite" class="icon"></a>
                         <a href=""><img src="media/eye.svg" alt="Watch" class="icon"></a>
@@ -118,13 +128,14 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="announcements" class="side-content">
             <h2 class="sec-title">Announcements</h2>
             <div class="sec-content">
                 <div class="announcement">
                     <h3 class="title">Site Maintenance</h3>
-                    <p>Vestibulum condimentum tellus lacus, in accusam elit maximus ac. Donec hendrerit sodales congue...</p>
+                    <p>Vestibulum condimentum tellus lacus, in accusam elit maximus ac. Donec hendrerit sodales
+                        congue...</p>
                 </div>
                 <div class="separator"></div>
                 <div class="announcement">
@@ -134,11 +145,12 @@
                 <div class="separator"></div>
                 <div class="announcement">
                     <h3 class="title">Updated Privacy Policy</h3>
-                    <p>Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</p>
+                    <p>Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras fringilla
+                        sagittis sem in mattis...</p>
                 </div>
             </div>
         </section>
-        
+
         <section id="trending" class="side-content">
             <h2 class="sec-title">Trending</h2>
             <ul class="sec-content">
@@ -173,7 +185,7 @@
             </ul>
         </section>
     </main>
-    
+
 </body>
 
 </html>
